@@ -3,6 +3,101 @@
 ##
 ## Get latest from https://github.com/github/gitignore/blob/master/VisualStudio.gitignore
 
+# OS junk files:
+#
+[Tt]humbs.db
+*.DS_Store
+
+# Build output files:
+#
+*.exe
+*.dll
+*.lib
+
+# Visual Studio project files:
+#
+*.vcxproj.filters
+*.user
+*.aps
+*_i.c
+*_p.c
+*.ncb
+*.suo
+*.tlb
+*.tlh
+*.bak
+*.[Cc]ache
+*.ilk
+*.log
+*.sbr
+*.sdf
+*.opensdf
+ipch/
+[Oo]User #?/
+[Bb]in
+[Dd]ebug*/
+[Rr]elease*/
+
+# Visual Studio build files:
+#
+*.idb
+*.pch
+*.pdb
+*.ipch
+*.tlog
+*.lastbuildstate
+*.unsuccessfulbuild
+*.[Oo]User #?
+
+# MonoDevelop
+#
+*.pidb
+*.userprefs
+Ankh.NoLoad
+
+# Tooling
+#
+_ReSharper*/
+*.resharper
+[Tt]est[Rr]esult*
+*.sass-cache
+
+# Project build files:
+#
+[Bb]uild/
+
+# Subversion and SourceSafe files:
+#
+.svn
+*.vspscc
+*.vssscc
+
+# Office temp. files:
+#
+~$*
+
+# Vim temp. files:
+#
+*~
+
+# NuGet:
+#
+packages/
+*.nupkg
+
+# ncrunch
+#
+*ncrunch*
+*crunch*.local.xml
+
+# Visual Studio database project files
+#
+*.dbmdl
+
+# Test files
+#
+*.testsettings
+
 # User-specific files
 *.suo
 *.user
