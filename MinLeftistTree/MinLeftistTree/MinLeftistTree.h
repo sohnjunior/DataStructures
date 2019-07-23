@@ -74,7 +74,7 @@ template<class T>
 inline void MinLeftistTree<T>::Meld(MinLeftistTree<T>* b) {
 	if (IsEmpty())
 		root = b->root;
-	else
+	else if(!b->IsEmpty())
 		root = Meld(root, b->root);
 	b->root = NULL;
 }
