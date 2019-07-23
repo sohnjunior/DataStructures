@@ -49,13 +49,13 @@ inline LeftistNode<T>* MinLeftistTree<T>::Meld(LeftistNode<T>* a, LeftistNode<T>
 		b = temp;
 	}	// swap if a is bigger than b
 
-	// 
+	// connect the node
 	if (a->rightChild == NULL)
 		a->rightChild = b;
 	else
 		a->rightChild = Meld(a->rightChild, b);
 
-	// 
+	// check the shortest
 	if (a->leftChild == NULL || a->leftChild->shortest < a->rightChild->shortest) {
 		LeftistNode<T>* temp = a->leftChild;
 		a->leftChild = a->rightChild;
@@ -91,10 +91,17 @@ inline void MinLeftistTree<T>::Push(T newdata) {
 
 template<class T>
 inline void MinLeftistTree<T>::Pop() {
+	// check empty
+	if (IsEmpty())
+		return;
+
 	// meld root's left and right child
-	LeftistNode<T>* newroot = Meld(root->leftChild, root->rightChild);
+	LeftistNode<T>* minNode = root;
+	MinLeftistTree<T> tempTree;
+	tempTree.root = root->rightChild;
+	root = root->leftChild;
+	Meld(&tempTree);
 
 	// replace root node
-	delete root;
-	root = newroot;
+	delete minNode;
 }
